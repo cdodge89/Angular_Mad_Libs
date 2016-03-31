@@ -1,0 +1,26 @@
+{
+  "name": "angular_mad_libs",
+  "description": "",
+  "main": "dist/app.js",
+  "authors": [
+    "Connor Dodge"
+  ],
+  "license": "ISC",
+  "homepage": "d",
+  "moduleType": [
+    "node"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.3"
+  }
+}
