@@ -1,3 +1,23 @@
 @import url(../dist/bower_components/bootstrap/dist/css/bootstrap.css);
+body {
+  background: #622387; }
+
+.container {
+  width: 60%; }
+
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 4em; }
+
+.jumbotron {
+  color: rgba(1, 1, 1, 0.5); }
+
+input {
+  width: 100%; }
+
+.words p {
+  text-align: right;
+  font-size: 25px; }
 
 /*# sourceMappingURL=main.css.map */
