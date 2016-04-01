@@ -981,7 +981,15 @@
 			var maxWords = getStory(storyName)[wordType];
 			if(words.length < maxWords){
 				for(var i = words.length; i < maxWords; i++){
-					words.push()
+					if(wordType === 'nouns'){
+						words.push(getNoun);
+					} else if(wordType === 'adjectives'){
+						words.push(getAdjective);
+					} else if(wordType === 'verbs'){
+						words.push(getVerb);
+					}else if(wordType === 'adverbs'){
+						words.push(getAdverb);
+					}
 				}
 			}
 		}
