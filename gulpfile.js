@@ -41,10 +41,10 @@ gulp.task("concatScripts", function() {
     .pipe(gulp.dest('dist'));
  });
 
- // gulp.task('copyViews', function(){
- // 	return gulp.src('src/views/*.html')
- // 		.pipe(gulp.dest('dist/views'));
- // });
+ gulp.task('copyViews', function(){
+ 	return gulp.src('src/views/*.html')
+ 		.pipe(gulp.dest('dist/views'));
+ });
 
  gulp.task('copyIndex', function(){
  	return gulp.src('src/index.html')
@@ -65,9 +65,10 @@ gulp.task("concatScripts", function() {
   gulp.watch('src/scss/*.scss', ['compileSass']);
   gulp.watch('js/main.js', ['concatScripts']);
   gulp.watch('src/index.html', ['copyIndex']);
+  gulp.watch('src/views/*.html', ['copyIndex']);
 });
 
- gulp.task('serve', ['watchFiles', 'compileSass', 'concatScripts', 'copyIndex'], function(){
+ gulp.task('serve', ['watchFiles', 'compileSass', 'concatScripts', 'copyIndex', 'copyViews'], function(){
  	gulp.src('dist/index.html')
  		.pipe(open({app: 'chrome'}));
  });
@@ -76,6 +77,7 @@ gulp.task("concatScripts", function() {
  	gulp.watch('src/scss/*.scss', ['serve']);
 	gulp.watch('src/js/*.js', ['serve']);
 	gulp.watch('src/index.html', ['serve']);
+  gulp.watch('src/views/*.html', ['copyIndex']);
  });
 
  gulp.task('deploy', ['minifyScripts', 'minifyCss', 'copyIndex']);

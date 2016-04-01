@@ -3,30 +3,34 @@
 <head>
 	<title>Angular MadLibs</title>
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src='app.js'></script>
 </head>
-<body>
+<body ng-app='madLibsGenerator'>
 	<header><h1> Angular Mad-Libs </h1></header>
 	<div class='container' id='display'>
-		<div class='jumbotron'>
+		<div class='jumbotron' ng-controller='DisplayController as display'>
 			<div class='row'>
 				<div class='col-md-3 words'>
 					<p>Nouns:</p>
 					<p>Adjectives:</p>
-					<p>Adverbs:</p>
 					<p>Verbs:</p>
+					<p>Adverbs:</p>
 				</div>
 				<div class='col-md-9'>
-					<form>
-						<p><input type='text' id='nouns' placeholder='noun, noun, noun, noun'></p>
-						<p><input type='text' id='adjectives' placeholder='adjective, adjective, adjective, adjective'></p>
-						<p><input type='text' id='adverbs' placeholder='adverb, adverb, adverb, adverb'></p>
-						<p><input type='text' id='verbs' placeholder='verb, verb, verb, verb'></p>
+					<form name='display.inputForm'>
+						<p><input type='text' name='nouns' placeholder='noun, noun, noun, noun' ng-model="display.userWords.nouns"></p>
+						<p><input type='text' name='adjectives' placeholder='adjective, adjective, adjective, adjective' ng-model='display.userWords.adjectives'></p>
+						<p><input type='text' name='verbs' placeholder='verb, verb, verb, verb' ng-model='display.userWords.verbs'></p>
+						<p><input type='text' name='adverbs' placeholder='adverb, adverb, adverb, adverb' ng-model='display.userWords.adverbs'></p>
 					</form>
 				</div>
-				
+			</div>
+			<hr>
+			<div class='row'>
+				<display-storytabs></display-storytabs>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src='app.js'></script>
+	
 </body>
 </html>

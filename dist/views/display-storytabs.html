@@ -1,0 +1,29 @@
+<section class='story-tabs'>
+  <ul class="nav nav-pills">
+    <li ng-class="{ active:tab.isSet(1) }">
+      <a href ng-click="tab.setTab(1)">George the Dragon Slayer </a>
+    </li>
+    <li ng-class="{ active:tab.isSet(2) }">
+      <a href ng-click="tab.setTab(2)">Jack ran quickly down the hill!</a>
+    </li>
+    <li ng-class="{ active:tab.isSet(3) }">
+      <a href ng-click="tab.setTab(3)">Peter Piper's Peppers</a>
+    </li>
+  </ul>
+
+  
+  <div ng-show="tab.isSet(1)" class ='story'>
+    George was a valiant <span>{{display.noun}}</span>, the most valiant in all of the <span>{{display.noun}}.</span> He <span>{{display.adverb}}</span> saved <span>{{display.noun}}</span> that needed help. One day, he recieved a <span>{{display.adjective}}</span> message. The <span>{{display.noun}}</span> was in danger! A great, big, <span>{{display.adjective}}</span> dragon had stolen the <span>{{display.noun}}</span> from the castle. George went and found that <span>{{display.adjective}}</span> dragon and ran him through with his <span>{{display.adjective}}</span> sword
+  </div>
+
+  
+  <div ng-show="tab.isSet(2)" class ='story'>
+    Jack was a <span>{{display.adjective}}</span> boy. He liked to <span>{{display.verb}}</span> quite a bit. Once day, his <span>{{display.adjective}}</span> mother sent him to go and fetch some <span>{{display.noun}}</span>. He grabbed his <span>{{display.noun}}</span> and ran <span>{{display.adverb}}</span> to the top of the <span>{{display.noun}}</span>. Once at the top, he gathered all of the <span>{{display.noun}}</span> he could see. Jack then proceeded to <span>{{display.verb}}</span> <span>{{display.adverb}}</span> and he <span>{{display.verb}}</span> all the way home.
+  </div>
+
+  
+  <div ng-show="tab.isSet(3)" class ='story'>
+    Peter Piper picked a peck of pickled <span>{{display.noun}}</span>. He then <span>{{display.adverb}}</span> quickly to the marketplace so that he could <span>{{display.verb}}</span> them. Once he got there, he ran into the pickle<span>{{display.noun}}</span>! With much trepidation he <span>{{display.adverb}}</span> <span>{{display.verb}}</span> somewhere else. His pickled <span>{{display.noun}}</span> was hard to <span>{{display.verb}}</span>, so he hid it in a <span>{{display.adjective}}</span> box.
+  </div>
+
+</section>
